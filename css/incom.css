@@ -1,22 +1,27 @@
-.expen-balance{
-    text-align: center;
-}
 
-.save-gr h4{
-    display: inline;
+.Cal-output {
+  text-align: center;
+  margin-top: 25px;
 }
-.save-input-mony{
-   width: 40%; 
+.save-gr{
+    margin-top: 25px;
 }
-.food-iput-cost{
-    display: inline;
+.save-gr h4 {
+  display: inline;
 }
-.cal-section{
-    background-color: rgb(245, 244, 243);
+.save-input-mony {
+  width: 40%;
 }
-.incme-lebel h3{
-text-align: center;
+.food-iput-cost {
+  display: inline;
 }
-.expen-lebel h3{
-text-align: center;
+.cal-section {
+  background-color: rgb(245, 244, 243);
+  padding: 30px;
+}
+.incme-lebel h3 {
+  text-align: center;
+}
+.expen-lebel h3 {
+  text-align: center;
 }

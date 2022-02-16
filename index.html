@@ -12,6 +12,10 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="page-heading">
+                    <h1 class="text-center ">INCOME-COST-SAVING</h1> 
+                </div>
+                
                 <div class="col-7">
 
                 </div>
@@ -27,26 +31,25 @@
                             <div class="expen-lebel">
                                 <h3>Expenses</h3>
                             </div>
-                            
-                            <div class="food-cost">
-                                <h5>Food: </h5>
-                                <input type="text" class="form-control food-iput" id="formGroupExampleInput2" placeholder=" input your food cost">
+                            <div class="cost-items">
+                                <div class="food-cost">
+                                    <h5>Food: </h5>
+                                    <input type="text" class="form-control food-iput" id="formGroupExampleInput2" placeholder=" input your food cost">
+                                </div>
+                                <div class="rent-cost">
+                                    <h5>Rent: </h5>
+                                    <input type="text" class="form-control food-iput" id="formGroupExampleInput2" placeholder=" input your rent">
+                                </div>
+                                <div class="clothes-cost">
+                                    <h5>Clothes: </h5>
+                                    <input type="text" class="form-control food-iput" id="formGroupExampleInput2" placeholder=" input clothes cost">
+                                </div>
                             </div>
-                            <div class="rent-cost">
-                                <h5>Rent: </h5>
-                                <input type="text" class="form-control food-iput" id="formGroupExampleInput2" placeholder=" input your rent">
-                            </div>
-                            <div class="clothes-cost">
-                                <h5>Clothes: </h5>
-                                <input type="text" class="form-control food-iput" id="formGroupExampleInput2" placeholder=" input clothes cost">
-                            </div>
-                           
-                            
                         </div>
-                        <div class="expen-balance">
+                        <div class="Cal-output">
                             <button type="submit" class="btn btn-primary cal-btn">Calculate</button>
-                            <h3>Total Expenses: <span id="total-expen">00</span></h3>
-                            <h3>Total Balnce: <span id="total-balance">00</span></h3>
+                            <h4>Total Expenses: $ <span id="total-expen">00</span></h4>
+                            <h4>Total Balnce: $ <span id="total-balance">00</span></h4>
                             
                         </div>
                         
@@ -57,7 +60,11 @@
                                 <h4> %</h4>
                                 <button type="submit" class="btn btn-primary">Save </button>
                             </div>
-                            
+                            <div class="Cal-output">
+                                <h4>Saving Amount: $ <span id="total-expen">00</span></h4>
+                                <h4>Remaining Balnce: $ <span id="total-balance">00</span></h4>
+                                
+                            </div>
                         </div>
 
                     </div>
