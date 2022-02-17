@@ -1,13 +1,15 @@
 //handle total  balance cost event
-document.getElementById('calculate-button').addEventListener('click', function(){
+document.getElementById('calculate-button').addEventListener('click', 
+function(){
     //get the amount income
     const incomeInput = document.getElementById('income-input');
     const newIncomeAmountText = incomeInput.value;
     const newIncomeAmount = parseFloat(newIncomeAmountText);
+    //balnce output
     const balanceTotal = document.getElementById('total-balance');
     const previousBalanceText = balanceTotal.innerText;
    const  previusBalanceAmount = parseFloat(previousBalanceText);
-
+// expenses output
     const expensesTotal = document.getElementById('total-expen');
     const previousExpensesText = expensesTotal.innerText;
    const  previusExpenseseAmount = parseFloat(previousExpensesText);
@@ -31,16 +33,46 @@ document.getElementById('calculate-button').addEventListener('click', function()
      const newTotalExpenses = previusExpenseseAmount + newClotheCostAmount + newRentAmount + newFoodCostAmount ;
     expensesTotal.innerText = newTotalExpenses;
      
-     console.log();
-     
-
-    
-  
-
-
 
 //cleare the inpit feild
-  
-    // console.log('clicked');
     incomeInput.value = '';
+    foodCostInput.value = '';
+    rentInput.value = '';
+    clothesCostInput.value = '';
+});
+// saving part
+document.getElementById('save-button').addEventListener('click',
+ function(){
+     // svaing amount output
+    const savingTotal = document.getElementById('save-total');
+    const preSavingTotal = savingTotal.innerText;
+    const presavingTotalAmount = parseFloat(preSavingTotal);
+    // remaining balance output
+    const remainBalance = document.getElementById('remain-balance');
+    const preRamainBalnce = remainBalance.innerText;
+    const preRamainBalnceAmount = parseFloat(preRamainBalnce);
+
+    //console.log(savingTotalAmount);
+    //balnce output
+    const balanceTotal = document.getElementById('total-balance');
+    const previousBalanceText = balanceTotal.innerText;
+    const  previusBalanceAmount = parseFloat(previousBalanceText);
+
+    // expenses output
+    const expensesTotal = document.getElementById('total-expen');
+    const previousExpensesText = expensesTotal.innerText;
+    const  previusExpenseseAmount = parseFloat(previousExpensesText);
+
+
+    const inputSavePercent = document.getElementById('percetage-input');
+    const inputSavePercentText = inputSavePercent.value;
+    const inputSavePercentAmount = parseFloat(inputSavePercentText);
+
+    const newSavingAmount = (presavingTotalAmount) + (previusBalanceAmount * inputSavePercentAmount) / 100 ;
+    savingTotal.innerText = newSavingAmount;
+    const totalRemainBalnce = preRamainBalnceAmount + (previusBalanceAmount - previusExpenseseAmount - newSavingAmount);
+    remainBalance.innerText = totalRemainBalnce;
+    inputSavePercent.value = '';
+ 
+
 });
