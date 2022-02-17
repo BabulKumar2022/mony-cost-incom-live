@@ -1,4 +1,10 @@
-
+body{
+  font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+.heading-color{
+  color: darkmagenta;
+}
 .Cal-output {
   text-align: center;
   margin-top: 25px;
@@ -24,4 +30,9 @@
 }
 .expen-lebel h3 {
   text-align: center;
+}
+.mony-left-images{
+background-size: cover;
+width:80%;
+overflow: hidden;
 }

@@ -1,6 +1,18 @@
 //handle total  balance cost event
 document.getElementById('calculate-button').addEventListener('click', 
 function(){
+// error handaler
+    const message = document.getElementById('err-sms');
+    message.innerText = '';
+    let x = document.getElementById("income-input").value;
+    try {
+        if( x = '') throw "emty";
+        if(isNaN(x)) throw "not a number";
+    }
+    catch(err){
+        message.innerText = "Input is " + err;
+     }
+
     //get the amount income
     const incomeInput = document.getElementById('income-input');
     const newIncomeAmountText = incomeInput.value;
@@ -39,10 +51,13 @@ function(){
     foodCostInput.value = '';
     rentInput.value = '';
     clothesCostInput.value = '';
+
 });
+
+
 // saving part
-document.getElementById('save-button').addEventListener('click',
- function(){
+    document.getElementById('save-button').addEventListener('click',
+    function(){
      // svaing amount output
     const savingTotal = document.getElementById('save-total');
     const preSavingTotal = savingTotal.innerText;
@@ -74,5 +89,4 @@ document.getElementById('save-button').addEventListener('click',
     remainBalance.innerText = totalRemainBalnce;
     inputSavePercent.value = '';
  
-
 });
